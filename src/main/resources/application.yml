@@ -1,0 +1,15 @@
+# LOCAL DB CONFIG
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-batch
+    username: batch
+    password: password
+  jpa:
+    properties:
+      hibernart:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  batch:
+    jdbc:
+      initialize-schema: always
