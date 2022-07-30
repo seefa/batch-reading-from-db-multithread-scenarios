@@ -40,7 +40,7 @@ public class ChuckBasedJob {
     public PagingQueryProvider queryProvider() throws Exception {
         SqlPagingQueryProviderFactoryBean factory = new SqlPagingQueryProviderFactoryBean();
         factory.setSelectClause("SELECT customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, postalCode, country, salesRepEmployeeNumber, creditLimit");
-        factory.setFromClause("FROM customers");
+        factory.setFromClause("FROM `spring-batch`.customers");
         factory.setSortKey("customerNumber");
         factory.setDataSource(dataSource);
         return factory.getObject();
